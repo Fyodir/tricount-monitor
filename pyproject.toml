@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "tricount-extractor"
+version = "0.1.0"
+description = "Extract and save Tricount registries to Excel files"
+requires-python = ">=3.14"
+dependencies = [
+    "cryptography>=50.0.0",
+    "httpx>=0.28.1",
+    "ipywidgets>=8.1.9",
+    "mkdocs>=1.6.1",
+    "numpy>=2.5.2",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.4",
+    "plotly-express>=0.4.1",
+    "rclone-python>=0.1.25",
+]
+
+[project.scripts]
+tricount-extractor = "tricount_extractor.main:main"
+
+[dependency-groups]
+lint = [
+    "pre-commit==4.6.2",
+    "ruff==0.16.4",
+]
+dev = [
+    "pytest==9.1.1",
+]
