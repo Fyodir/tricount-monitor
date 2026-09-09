@@ -1,0 +1,12 @@
+# mkdocs.yml
+
+site_name: Shandy Tricount Debts
+
+theme:
+  name: material
+
+markdown_extensions:
+  - attr_list
+
+extra_css:
+  - stylesheets/extra.css

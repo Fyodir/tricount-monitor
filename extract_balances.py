@@ -82,14 +82,14 @@ def main():
     # fig.show()
     
     fig.write_html(
-        os.path.join("assets", PLOT_NAME)
+        os.path.join("docs", "plots", PLOT_NAME)
     )
     
     # TODO - output chart to Google Drive (Rclone)
     #rclone.copyto(
     #    os.path.join(DIR_TMP, PLOT_NAME),
     #    os.path.join(RCLONE_BASE, PLOT_NAME)
-    )
+    #)
     
     # TODO - Upload todays Tricount Balance CSV to gdrive
     rclone.copy(
